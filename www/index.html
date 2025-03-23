@@ -37,6 +37,9 @@
       50%{background-position:100% 19%}
       100%{background-position:0% 82%}
   }
+  a {
+    color: black;
+  }
 </style>
 <h1>IDGTAN 2</h1>
 <div>
@@ -46,10 +49,12 @@
     <button onclick="go()">Go</button><br>
     Or search:<br>
     <input id="jlq1x"><button onclick="search()">Search</button>
-    <div id="results">
+    <div id="results" class="invert">
     </div>
+    Or look at every game:<br>
+    <a href="./all.html">All games</a>
     </p>
 </div>
 <button onclick="(()=>{let a=new Audio('./assets/dndc.mp3');a.play()})()">do you want to?</button>
-<script src="./assets/example.js"></script>
+<script src="./assets/games.js"></script>
 <script src="./assets/main.js"></script>

@@ -16,10 +16,25 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
         elem = document.createElement("option");
         elem.innerText = letters[i];
-        elem.setAttribute("value", "./letter.html#"+letters[i]);
+        elem.setAttribute("value", letters[i]);
         links.appendChild(elem);
     }
 });
 function go() {
-    
+    let letter = document.getElementById("letters").selectedOptions[0];
+    location.href = "./letter.html#" + letter.value;
+}
+function search() {
+    let elem;
+    document.getElementById("results").innerHTML = "";
+    for (let i = 0; i < games.length; i++) {
+        if (games[i]["title"].toLowerCase().startsWith(document.getElementById("jlq1x").value.toLowerCase())) {
+            elem = document.createElement("a");
+            elem.href = games[i]["link"];
+            elem.innerText = games[i]["title"];
+            document.getElementById("results").appendChild(elem);
+            elem = document.createElement("br");
+            document.getElementById("results").appendChild(elem);
+        }
+    }
 }
