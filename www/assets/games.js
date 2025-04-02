@@ -420,6 +420,10 @@ const games = [
     "title": "Rooftop Snipers"
   },
   {
+    "link": "./games/run3/index.html",
+    "title": "Run 3"
+  },
+  {
     "link": "./games/sand-game/index.html",
     "title": "Sand Game"
   },
